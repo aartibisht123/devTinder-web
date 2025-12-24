@@ -30,7 +30,7 @@ const NavBar = () => {
   </div>
   {user && (
   <div className="flex-none gap-2">
- <div className="form-control flex">welome, {user.firstName}</div>
+
     <div className="dropdown dropdown-end mx-5 flex">
       <div 
       tabIndex={0} 
@@ -52,6 +52,7 @@ const NavBar = () => {
           </Link>
         </li>
         <li><Link to="/connection">Connections</Link></li>
+        <li><Link to="/request">Request</Link></li>
         <li><a onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>

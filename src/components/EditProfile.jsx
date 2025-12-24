@@ -40,10 +40,10 @@ const EditProfile = ({user}) => {
 
   return (
     <>
-    <div className='flex justify-center my-10 '>
-    <div className='flex justify-center mx-10  '>
-    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-96 border h-170 p-4" >
-  <legend className="fieldset-legend">Edit Profile</legend>
+    <div className='flex justify-center my-1  '>
+    <div className='flex justify-center mx-10 '>
+    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-96 border h-162 p-4  " >
+  <legend className="fieldset-legend ">Edit Profile</legend>
 
   <label className="label " >first Name:</label>
   <input type="text" className="input"  value={firstName} onChange={(e)=> setFirstName(e.target.value)}/>
@@ -71,24 +71,26 @@ const EditProfile = ({user}) => {
       </select>
 
   <label className="label " >Skills:</label>
-  <input type="string" className="input"  value={skills} onChange={(e)=> setSkills(e.target.value)}/>
+  <input type="text" className="input"  value={skills} onChange={(e)=> setSkills(e.target.value)}/>
 
 
-  <fieldset className="fieldset">
-  <legend className="fieldset-legend">About:</legend>
-  <textarea className="textarea h-20" value={about} onChange={(e)=> setAbout(e.target.value)}></textarea>
-</fieldset>
+ <label className="label " >About:</label>
+  <input type="text" className="input"  value={about} onChange={(e)=> setAbout(e.target.value)}/>
+
 
 
 <p className='text-red-500'>{error} </p>
 
 <div className='flex justify-center  '>
-  <button className="btn  btn-neutral btn-secondary " onClick={saveProfile} >Save Profile</button>
+  <button className="btn  btn-neutral btn-secondary mt-5 " onClick={saveProfile} >Save Profile</button>
 </div>
 
 </fieldset>
-    </div>
-    <UserCard user={{firstName, lastName, age, skills, about, photoUrl, gender}}/>
+    </div >
+<div className='mt-7'>
+  <UserCard user={{firstName, lastName, age, skills, about, photoUrl, gender}}/>
+</div>
+  
 </div>
 
 { showToast && <div className="toast toast-top toast-center">
