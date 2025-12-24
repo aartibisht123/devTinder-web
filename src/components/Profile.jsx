@@ -1,15 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import EditProfile from './EditProfile'
 
 const Profile = () => {
-  return (
-    <div>
-   <fieldset className="fieldset">
-  <legend className="fieldset-legend">What is your name?</legend>
-  <input type="text" className="input" placeholder="Type here" />
-  <p className="label">Optional</p>
-</fieldset>
-</div>
-  )
+  const user = useSelector((store) => store.user);
+  
+return (
+  user &&(
+<div>
+ <EditProfile user={user}/>
+  </div>))
+  
 }
 
 export default Profile

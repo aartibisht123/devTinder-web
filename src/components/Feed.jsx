@@ -12,7 +12,7 @@ const Feed = () => {
   const dispatch = useDispatch();
 
   const getFeed = async () => {
-    if (feed.length > 0) return;
+    if (feed.length>0) return;
 
     try {
       const res = await axios.get(
@@ -20,7 +20,7 @@ const Feed = () => {
         { withCredentials: true }
       );
 
-      // IMPORTANT: must be array
+  
       dispatch(addFeed(res.data.data));
     } catch (error) {
       console.error(error.message);
@@ -32,7 +32,7 @@ const Feed = () => {
   }, []);
 
   return (
-    feed.length > 0 && (
+   feed.length>0 && (
       <div className="flex justify-center my-10">
         <UserCard user={feed[0]} />
       </div>
