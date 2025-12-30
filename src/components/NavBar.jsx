@@ -35,7 +35,7 @@ function handleTheme(e) {
   return (
   <div className="navbar bg-base-300 ">
   <div className="flex-1">
-    <Link to="/" className="btn btn-ghost text-xl">Zivo </Link>
+    <Link to="/" className="btn btn-ghost text-xl">Talksy </Link>
     <h6 className="text-xs" >— Match the energy —</h6>
   </div>
   {user && (
