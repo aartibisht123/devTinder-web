@@ -30,9 +30,9 @@ const Connections = () => {
             const {_id, firstName, lastName, age, skills, about, photoUrl, gender} = connection;
 
             return(
-              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto'>
+              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto h-40 items-center '>
                 <div>
-                  <img src={photoUrl} alt="photo" className='m-20 h-20 rounded-full'/>
+                  <img src={photoUrl} alt="photo" className=' m-20 h-20 rounded-full '/>
                 </div>
                
                <div className='text-left mx-4'>
