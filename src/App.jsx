@@ -9,7 +9,7 @@ import Feed from "./components/Feed"
 import Connections from "./components/Connections"
 import Requests from "./components/Requests"
 import Chat from "./components/Chat"
-import Premium from "./components/premium"
+import Premium from "./components/Premium"
 
 
 function App() {
