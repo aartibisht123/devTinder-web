@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { BASE_URL } from '../utils/constants'
 import { useDispatch, useSelector } from 'react-redux'
 import { addConnections } from '../utils/connectionSlice'
+import { Link } from 'react-router-dom'
 
 const Connections = () => {
   const connections = useSelector((store) => store.connection);
@@ -24,13 +25,13 @@ const Connections = () => {
 
        if(connections.length === 0) return <h1 className='flex justify-center my-10'> No Connections  Found</h1>
     
- return <div className='text-center my-10'>
+ return <div className='text-center my-10 ' >
           <h1 className='text-bold color- white text-3xl'>Connections</h1>
           {connections.map((connection)=>{
             const {_id, firstName, lastName, age, skills, about, photoUrl, gender} = connection;
 
             return(
-              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto h-40 items-center '>
+              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto h-40 items-center  '>
                 <div>
                   <img src={photoUrl} alt="photo" className=' m-20 h-20 rounded-full '/>
                 </div>
@@ -40,9 +41,13 @@ const Connections = () => {
                 { age && gender && <p>{age+ ", " + gender}</p>}
                    <p>{about}</p>
                    <p>{skills}</p>
-
-               </div>
                 
+               </div>
+              
+                 <Link to={"/chat/" + _id }> 
+                 <button className='btn btn-primary '>Chat</button> </Link> 
+             
+                 
               </div>
             )
 
