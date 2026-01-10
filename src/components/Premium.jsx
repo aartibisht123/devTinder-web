@@ -56,7 +56,8 @@ const Premium = () => {
     return isUserPremium ? (
     "You're are already a premium user"
   ) : (
-    <div className="flex flex-col md:flex-row justify-center gap-10  my-10 items-center  ">
+    <div className="flex flex-col md:flex-row justify-center gap-10  my-10 items-center 
+     ">
 
       {/* Silver Card */}
       <div className="card  w-72 md:w-96 bg-base-100 shadow-sm border bg-base-200 "  >

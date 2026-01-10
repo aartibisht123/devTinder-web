@@ -88,7 +88,7 @@ const EditProfile = ({user}) => {
 
 </fieldset>
     </div >
-<div className='w-full sm:w-[22rem] md:w-[24rem] mt-4 md:mt-0 flex justify-center'>
+<div className='w-full sm:w-[22rem] md:w-[24rem] mt-4 md:mt-0 flex justify-center '>
   <UserCard user={{firstName, lastName, age, skills, about, photoUrl, gender}}/>
 </div>
   

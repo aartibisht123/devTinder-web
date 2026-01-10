@@ -25,7 +25,7 @@ const Connections = () => {
 
        if(connections.length === 0) return <h1 className='flex justify-center my-10 '> No Connections  Found</h1>
     
- return <div className='text-center my-10 pr-6 ' >
+ return <div className='text-center my-10 pr-6 min-h-screen' >
           <h1 className='text-bold color- white text-3xl '>Connections</h1>
           {connections.map((connection)=>{
             const {_id, firstName, lastName,  photoUrl } = connection;

@@ -35,10 +35,10 @@ const Requests = () => {
 
        if(requests.length === 0) return <h1 className='flex justify-center my-10'> No Request Found</h1>
     
- return <div className='text-center my-10'>
+ return <div className='text-center my-10 min-h-screen'>
           <h1 className='text-bold color- white text-3xl'>Connection Requests</h1>
           {requests.map((request)=>{
-            const {_id, firstName, lastName, age, skills, about, photoUrl, gender} = request.fromUserId;
+            const {_id, firstName, lastName, photoUrl} = request.fromUserId;
 
             return(
               <div key={_id} className="flex items-center gap-4 m-4 p-4 border rounded-lg bg-base-300 md:w-1/2 md:mx-auto h-32 justify-around">
