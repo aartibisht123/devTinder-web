@@ -40,9 +40,10 @@ const EditProfile = ({user}) => {
 
   return (
     <>
-    <div className='flex justify-center my-1  '>
-    <div className='flex justify-center mx-10 '>
-    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-96 border h-162 p-4  " >
+    <div className='flex flex-col md:flex-row flex justify-center items-center gap-6 my-4 px-3 '>
+    <div className='mx-10 '>
+    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box 
+  w-full sm:w-[22rem] md:w-[24rem] border p-4 " >
   <legend className="fieldset-legend ">Edit Profile</legend>
 
   <label className="label " >first Name:</label>
@@ -87,7 +88,7 @@ const EditProfile = ({user}) => {
 
 </fieldset>
     </div >
-<div className='mt-7'>
+<div className='w-full sm:w-[22rem] md:w-[24rem] mt-4 md:mt-0 flex justify-center'>
   <UserCard user={{firstName, lastName, age, skills, about, photoUrl, gender}}/>
 </div>
   
@@ -105,3 +106,5 @@ const EditProfile = ({user}) => {
 }
 
 export default EditProfile;
+
+

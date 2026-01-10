@@ -7,12 +7,15 @@ import { BASE_URL } from '../utils/constants';
 
 const Login = () => {
 
-    const [emailId, setEmailId] = useState("aartisingh@gmail.com");
-    const [password, setPassword] = useState("Aartisingh@1234");
+    const [emailId, setEmailId] = useState("");
+    const [password, setPassword] = useState("");
      const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
     const [isLoginForm, setIsLoginFrom] = useState(true);
     const [error, setError] = useState("")
+    const [showPassword, setShowPassword] = useState(false);
+
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -74,7 +77,22 @@ const Login = () => {
   <input type="email" className="input"  value={emailId} onChange={(e)=> setEmailId(e.target.value)}/>
 
   <label className="label mt-3">Password</label>
-  <input type="password" className="input"  value={password} onChange={(e)=> setPassword(e.target.value)} />
+
+<div className="relative">
+  <input
+    type={showPassword ? "text" : "password"}
+    className="input w-full pr-10"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+  />
+
+  <span
+    className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-sm"
+    onClick={() => setShowPassword(!showPassword)}
+  >
+    {showPassword ? "Hide" : "Show"}
+  </span>
+</div>
 
 <p className='text-red-500'>{error} </p>
   <button className="btn btn-neutral mt-5" onClick={isLoginForm ? handleLogin : handleSignUp}>{isLoginForm?  "Login" : "Sign Up"}</button>
