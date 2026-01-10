@@ -49,9 +49,9 @@ const Login = () => {
         }
 
   return (
-    <div className={isLoginForm?'flex justify-center my-40' : 'flex justify-center my-20'}>
+    <div className={isLoginForm?'flex justify-center my-30 md:my-40' : 'flex justify-center my-10  md:my-20 '}>
      
-<fieldset className={isLoginForm? "fieldset bg-base-200 border-base-300 rounded-box w-xs border h-80 p-4": "fieldset bg-base-200 border-base-300 rounded-box w-xs border h-122 p-4 " } >
+<fieldset className={isLoginForm? "fieldset bg-base-00 border-base-300 rounded-box w-xs border h-80 p-4 ": "fieldset bg-base-200 border-base-300 rounded-box w-xs border h-122 p-4  " } >
   <legend className="fieldset-legend">
     {isLoginForm ? 'Login' : "SignUp"}</legend>
 

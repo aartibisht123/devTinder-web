@@ -23,25 +23,27 @@ const Connections = () => {
        },[]);
        if(!connections) return;
 
-       if(connections.length === 0) return <h1 className='flex justify-center my-10'> No Connections  Found</h1>
+       if(connections.length === 0) return <h1 className='flex justify-center my-10 '> No Connections  Found</h1>
     
- return <div className='text-center my-10 ' >
-          <h1 className='text-bold color- white text-3xl'>Connections</h1>
+ return <div className='text-center my-10 pr-6 ' >
+          <h1 className='text-bold color- white text-3xl '>Connections</h1>
           {connections.map((connection)=>{
-            const {_id, firstName, lastName, age, skills, about, photoUrl, gender} = connection;
+            const {_id, firstName, lastName,  photoUrl } = connection;
 
             return(
-              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto h-40 items-center  '>
-                <div>
-                  <img src={photoUrl} alt="photo" className=' m-20 h-20 rounded-full '/>
+              <div
+              key={_id} 
+              className="flex items-center gap-4 m-4 p-4 border rounded-lg bg-base-300 md:w-1/2 md:mx-auto h-32 justify-around">
+                <div >
+                  <img 
+                  src={photoUrl} 
+                  alt="photo" 
+                  className='h-14 w-14   md:h-20 md:w-20 rounded-full object-cover shrink-0'/>
                 </div>
                
                <div className='text-left mx-4'>
-                  <h2 className='font-bold text-xl'>{firstName + " " + lastName}</h2>
-                { age && gender && <p>{age+ ", " + gender}</p>}
-                   <p>{about}</p>
-                   <p>{skills}</p>
-                
+                  <h2 className='font-bold md:text-xl'>{firstName + " " + lastName}</h2>
+               
                </div>
               
                  <Link to={"/chat/" + _id }> 

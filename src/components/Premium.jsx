@@ -56,11 +56,11 @@ const Premium = () => {
     return isUserPremium ? (
     "You're are already a premium user"
   ) : (
-    <div className="flex flex-col md:flex-row justify-center gap-10 my-10 ">
+    <div className="flex flex-col md:flex-row justify-center gap-10  my-10 items-center  ">
 
       {/* Silver Card */}
-      <div className="card w-96 bg-base-100 shadow-sm border bg-base-200">
-        <div className="card-body">
+      <div className="card  w-72 md:w-96 bg-base-100 shadow-sm border bg-base-200 "  >
+        <div className="card-body ">
           <span className="badge badge-warning badge-sm">Silver Membership</span>
 
           <div className="flex justify-between items-center">
@@ -75,12 +75,12 @@ const Premium = () => {
             <li>✔ 3 months</li>
           </ul>
 
-          <button onClick={()=> handleBuyClick("gold")} className="btn btn-primary mt-6">Buy Silver</button>
+          <button onClick={()=> handleBuyClick("gold")} className="btn btn-primary mt-6 ">Buy Silver</button>
         </div>
       </div>
 
       {/* Gold Card */}
-      <div className="card w-96 bg-base-100 shadow-sm border bg-base-200">
+      <div className="card w-72 md:w-96 bg-base-100 shadow-sm border bg-base-200">
         <div className="card-body">
           <span className="badge badge-warning badge-sm">Gold Membership</span>
 

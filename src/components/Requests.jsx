@@ -41,19 +41,20 @@ const Requests = () => {
             const {_id, firstName, lastName, age, skills, about, photoUrl, gender} = request.fromUserId;
 
             return(
-              <div key={_id} className='flex m-4 p-4 border rounded-lg border bg-base-300 w-1/2 mx-auto justify-between items-center h-40 '>
-                <div>
-                  <img src={photoUrl} alt="photo" className='m-20 h-20 rounded-full'/>
+              <div key={_id} className="flex items-center gap-4 m-4 p-4 border rounded-lg bg-base-300 md:w-1/2 md:mx-auto h-32 justify-around">
+                <div className="flex items-center gap-4">
+                  <img src={photoUrl} alt="photo" className='h-16 w-16  md:h-20 md:w-20 rounded-full object-cover shrink-0 aspect-square'/>
                 </div>
                
                <div className='text-left mx-4'>
-                  <h2 className='font-bold text-xl'>{firstName + " " + lastName}</h2>
-                { age && gender && <p>{age+ ", " + gender}</p>}
-                   <p>{about}</p>
-                   <p>{skills}</p>
-               </div>    
-               <button className="btn btn-primary mx-2" onClick={() => reviewRequest("rejected", request._id)}>Reject</button>
-               <button className="btn btn-secondary mx-2" onClick={() => reviewRequest("accepted", request._id)}>Accept</button>       
+                  <h2 className='font-bold md:text-xl'>{firstName + " " + lastName}</h2>
+              
+               </div>   
+               <div className="flex flex-col md:flex-row gap-3">
+                <button className="btn btn-primary mx-2 " onClick={() => reviewRequest("rejected", request._id)}>Reject</button>
+               <button className="btn btn-secondary mx-2 " onClick={() => reviewRequest("accepted", request._id)}>Accept</button>  
+                </div> 
+                  
               </div>
             )
           })}

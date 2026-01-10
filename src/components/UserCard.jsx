@@ -20,9 +20,9 @@ const UserCard = ({ user }) => {
     }
 
   return (
-    <div className="card bg-base-300 w-89 mt-5 shadow-sm h-140">
+    <div className="card bg-base-300 w-70  shadow-sm h-120 md:mt-5 md:h-140 md:w-89 mt-2">
       <figure>
-        <img className="mt-10 h-75"
+        <img className="mt-10  h-50 md:h-75 w-50 md:w-75"
           src={photoUrl}
           alt="photo"
         />
@@ -34,7 +34,7 @@ const UserCard = ({ user }) => {
         <p > {skills}</p>
         <p  >{about}</p>
        
-        <div className="card-actions justify-center mx-4  my-6" >
+        <div className="card-actions justify-center md:mx-4  md:my-6 pb-8 md:pb-1" >
         <button className="btn btn-primary" onClick={()=> handleSendRequest("ignored" , _id)}> Ignore</button>
          <button className="btn btn-secondary" onClick={()=> handleSendRequest("interested" , _id)}>Interested </button>
         </div>
