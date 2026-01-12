@@ -6,6 +6,7 @@ import { addRequests, removeRequest } from '../utils/requestSlice';
 
 const Requests = () => {
   const requests = useSelector((store) => store.requests);
+  
   const dispatch = useDispatch();
 
   const reviewRequest = async(status, _id) =>{
@@ -38,6 +39,7 @@ const Requests = () => {
  return <div className='text-center my-10 min-h-screen'>
           <h1 className='text-bold color- white text-3xl'>Connection Requests</h1>
           {requests.map((request)=>{
+             if (!request.fromUserId) return null;
             const {_id, firstName, lastName, photoUrl} = request.fromUserId;
 
             return(
