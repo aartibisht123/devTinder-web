@@ -67,10 +67,10 @@ const Login = () => {
   {!isLoginForm && (
 <>
     <label className="label mt-3" >First Name</label>
-  <input type="email" className="input"  value={firstName} onChange={(e)=> setFirstName(e.target.value)}/>
+  <input type="text" className="input"  value={firstName} onChange={(e)=> setFirstName(e.target.value)}/>
 
     <label className="label mt-3" >Last Name</label>
-  <input type="email" className="input"  value={lastName} onChange={(e)=> setLastName(e.target.value)}/>
+  <input type="text" className="input"  value={lastName} onChange={(e)=> setLastName(e.target.value)}/>
   </>)}
 
   <label className="label mt-3" >Email ID</label>
